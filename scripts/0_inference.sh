@@ -1,11 +1,11 @@
-#!/bin/bash
+# !/bin/bash
 
 # ------ Inference audio tagging result with pretrained model. ------
 MODEL_TYPE="Cnn14"
-CHECKPOINT_PATH="Cnn14_mAP=0.431.pth"
+CHECKPOINT_PATH="/home/anurag/Documents/AI-ML/Agriculture-AI-Classification/git-repos/audioset_tagging_cnn/Cnn14_mAP=0.431.pth"
 
 # Download audio tagging checkpoint.
-wget -O $CHECKPOINT_PATH "https://zenodo.org/record/3987831/files/Cnn14_mAP%3D0.431.pth?download=1"
+# wget -O $CHECKPOINT_PATH "https://zenodo.org/record/3987831/files/Cnn14_mAP%3D0.431.pth?download=1"
 
 # Inference.
 python3 pytorch/inference.py audio_tagging \
@@ -16,10 +16,10 @@ python3 pytorch/inference.py audio_tagging \
 
 # ------ Inference sound event detection result with pretrained model. ------
 MODEL_TYPE="Cnn14_DecisionLevelMax"
-CHECKPOINT_PATH="Cnn14_DecisionLevelMax_mAP=0.385.pth"
+CHECKPOINT_PATH="/home/anurag/Documents/AI-ML/Agriculture-AI-Classification/git-repos/audioset_tagging_cnn/Cnn14_DecisionLevelMax_mAP=0.385.pth"
 
 # Download sound event detection checkpoint.
-wget -O $CHECKPOINT_PATH "https://zenodo.org/record/3987831/files/Cnn14_DecisionLevelMax_mAP%3D0.385.pth?download=1"
+# wget -O $CHECKPOINT_PATH "https://zenodo.org/record/3987831/files/Cnn14_DecisionLevelMax_mAP%3D0.385.pth?download=1"
 
 # Inference.
 python3 pytorch/inference.py sound_event_detection \
